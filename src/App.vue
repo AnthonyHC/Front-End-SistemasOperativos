@@ -1,5 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import Toolbar from "./products/components/toolbar.component.vue";
 </script>
 
 <template>
@@ -11,7 +12,9 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Vite + V1ue" />
+  <h2>Soy Eli</h2>
+  <toolbar></toolbar>
 </template>
 
 <style scoped>

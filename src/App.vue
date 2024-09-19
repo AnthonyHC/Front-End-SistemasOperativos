@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import Toolbar from "./products/components/toolbar.component.vue";
+import Login from './products/components/login.component.vue';
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import Toolbar from "./products/components/toolbar.component.vue";
   <HelloWorld msg="Vite + V1ue" />
   <h2>Soy Eli</h2>
   <toolbar></toolbar>
+  <login></login>
 </template>
 
 <style scoped>

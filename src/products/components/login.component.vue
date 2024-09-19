@@ -5,7 +5,9 @@ export default {
 </script>
 
 <template>
-
+  <div class="loginUsername">
+    Usuario: 
+  </div>
 </template>
 
 <style scoped>

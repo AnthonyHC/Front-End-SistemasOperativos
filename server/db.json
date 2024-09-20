@@ -1,0 +1,22 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "marca": "Rare Beauty",
+      "categoria": "Blush",
+      "nombre": "Blush Atardecer",
+      "descripcion": "Colorete color anaranjado con toques rosas",
+      "precio": "150",
+      "imagen": "https://monaco.pe/wp-content/uploads/2024/08/truth-mini.webp"
+    },
+    {
+      "id": "2",
+      "marca": "Essence",
+      "categoria": "Sombras",
+      "nombre": "Paleta de sombras amanecer",
+      "descripcion": "Paleta de sombras con colores neutros y oscuros",
+      "precio": "60",
+      "imagen": "https://i.blogs.es/c0b6f3/81slpluynfl._ac_sl1500_/original.jpeg"
+    }
+  ]
+}

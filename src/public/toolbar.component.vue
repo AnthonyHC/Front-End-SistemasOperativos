@@ -7,9 +7,9 @@ export default {
 </script>
 
 <template>
-  <pv-toolbar class="toolbar-container" style="border-radius: 3rem; padding: 1rem 1rem 1rem 1.5rem">
+  <pv-toolbar class="toolbar-container" style="border-radius: 3rem;">
     <template #start>
-      <img src="../../assets/logo.png" alt="Logo" class="logo" />
+      <img src="../assets/logo.png" alt="Logo" class="logo" width="70px"/>
       <p class="title-container">Solaris</p>
     </template>
     <template #center>
@@ -17,23 +17,27 @@ export default {
     </template>
     <template #end>
       <pv-button icon="pi pi-heart" severity="help" rounded aria-label="Favorite"
-                 class="button-heart-container"></pv-button>
+                 class="button-heart-container" @click="$router.push('favoriteProducts')"></pv-button>
+      <pv-button icon="pi pi-shopping-cart" severity="success" rounded aria-label="Cart"
+                 class="button-cart-container" @click="$router.push('productsShop')"></pv-button>
       <pv-button icon="pi pi-user" severity="info" rounded aria-label="User"
                  class="button-user-container"></pv-button>
     </template>
   </pv-toolbar>
+  <div class="router-view-container">
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
 .title-container {
   color: #f63fb0;
-  font-family: "Inter", cursive;
   font-weight: bolder;
   font-size: 30px;
   margin-left: 15px; /* Espaciado entre el logo y el título */
 }
 
-.button-heart-container, .button-user-container {
+.button-heart-container, .button-user-container, .button-cart-container{
   background-color: #f63fb0;
   border: black;
   margin-left: 10px; /* Espaciado entre los botones */

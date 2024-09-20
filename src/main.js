@@ -3,6 +3,7 @@ import './style.css'
 
 
 import App from './App.vue'
+import router from './router/index.js'
 
 //createApp(App).mount('#app')
 
@@ -34,4 +35,4 @@ app.component('pv-toolbar', Toolbar);
 app.component('pv-button', Button);
 app.component('pv-menubar', Menubar);
 
-app.mount('#app');
+app.use(router).mount('#app');

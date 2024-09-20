@@ -39,6 +39,7 @@ export default {
       <span class="total-value">{{ totalPrice }}</span>
     </div>
   </div>
+  <pv-button class="button-pay-container" @click="$router.push('/purchaseConfirmation')">Pagar</pv-button>
 </template>
 
 
@@ -71,5 +72,9 @@ export default {
 }
 .total-value {
   font-weight: bolder;
+}
+.button-pay-container {
+  background-color: #f63fb0;
+  border: none;
 }
 </style>

@@ -21,7 +21,7 @@ export default {
 
 <template>
   <div class="containerLogin">
-    <img src="../../assets/logoBig.png" alt="Logo" class="logo"/>
+    <img src="../assets/logoBig.png" alt="Logo" class="logo"/>
     <div class="loginUsername">
       <h1>Username:</h1>
       <input class="textboxUsername" type="text" v-model="username" id="username" placeholder="Enter your username" maxlength="20" />
@@ -39,6 +39,8 @@ export default {
 <style scoped>
 .containerLogin {
   margin: auto;
+  background-color: beige;
+  padding: 30px;
 }
   .loginUsername {
     margin-left: 405px;

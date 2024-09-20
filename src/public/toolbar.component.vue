@@ -1,29 +1,32 @@
 <script>
 
-
 export default {
   name: "toolbar",
 }
 </script>
 
 <template>
-  <pv-toolbar class="toolbar-container" style="border-radius: 3rem;">
-    <template #start>
-      <img src="../assets/logo.png" alt="Logo" class="logo" width="70px"/>
-      <p class="title-container">Solaris</p>
-    </template>
-    <template #center>
+  <div class="toolbar-content-container">
+    <pv-toolbar class="toolbar-container" style="border-radius: 3rem;">
+      <template #start>
+        <img src="../assets/logo.png" alt="Logo" class="logo" width="70px"/>
+        <a @click="$router.push('productsShop')">
+          <p class="title-container">Solaris</p>
+        </a>
+      </template>
+      <template #center>
 
-    </template>
-    <template #end>
-      <pv-button icon="pi pi-heart" severity="help" rounded aria-label="Favorite"
-                 class="button-heart-container" @click="$router.push('favoriteProducts')"></pv-button>
-      <pv-button icon="pi pi-shopping-cart" severity="success" rounded aria-label="Cart"
-                 class="button-cart-container" @click="$router.push('productsShop')"></pv-button>
-      <pv-button icon="pi pi-user" severity="info" rounded aria-label="User"
-                 class="button-user-container"></pv-button>
-    </template>
-  </pv-toolbar>
+      </template>
+      <template #end>
+        <pv-button icon="pi pi-heart" severity="help" rounded aria-label="Favorite"
+                   class="button-heart-container" @click="$router.push('favoriteProducts')"></pv-button>
+        <pv-button icon="pi pi-shopping-cart" severity="success" rounded aria-label="Cart"
+                   class="button-cart-container" @click="$router.push('shopCar')"></pv-button>
+        <pv-button icon="pi pi-user" severity="info" rounded aria-label="User"
+                   class="button-user-container"></pv-button>
+      </template>
+    </pv-toolbar>
+  </div>
   <div class="router-view-container">
     <router-view></router-view>
   </div>
@@ -35,6 +38,7 @@ export default {
   font-weight: bolder;
   font-size: 30px;
   margin-left: 15px; /* Espaciado entre el logo y el título */
+  text-align: center;
 }
 
 .button-heart-container, .button-user-container, .button-cart-container{
@@ -62,4 +66,5 @@ export default {
   height: auto;
   margin-right: 15px; /* Espaciado entre el logo y el título */
 }
+
 </style>

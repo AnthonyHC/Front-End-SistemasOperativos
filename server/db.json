@@ -1,5 +1,167 @@
 {
-  "productos": [
+  "clientes": [
+    {
+      "id": "1",
+      "nombre": "Chloe",
+      "email": "Chloe_Zaoui5584@avn7d.digital",
+      "telefono": "963346612",
+      "apellido": "Zaoui",
+      "contrasena": "Chloe2024!"
+    },
+    {
+      "id": "2",
+      "nombre": "Stephanie",
+      "email": "Stephanie_Shaw5065@c2nyu.online",
+      "telefono": "903250990",
+      "apellido": "Shaw",
+      "contrasena": "Steph2024!"
+    },
+    {
+      "id": "3",
+      "nombre": "Joyce",
+      "email": "Joyce_Salt2459@bu2lo.business",
+      "telefono": "929160436",
+      "apellido": "Salt",
+      "contrasena": "Joyce2024!"
+    },
+    {
+      "id": "4",
+      "nombre": "Teagan",
+      "email": "Teagan_Rigg2190@xtwt3.shop",
+      "telefono": "990205088",
+      "apellido": "Rigg",
+      "contrasena": "Teagan2024!"
+    },
+    {
+      "id": "5",
+      "nombre": "Shelby",
+      "email": "Shelby_Allcott226@fhuux.business",
+      "telefono": "974640000",
+      "apellido": "Allcott",
+      "contrasena": "Shelby2024!"
+    },
+    {
+      "id": "6",
+      "nombre": "Emely",
+      "email": "Emely_Adams3545@nmz0p.meet",
+      "telefono": "937616625",
+      "apellido": "Adams",
+      "contrasena": "Emely2024!"
+    },
+    {
+      "id": "7",
+      "nombre": "Raquel",
+      "email": "Raquel_Ellis1719@lhp4j.com",
+      "telefono": "965939809",
+      "apellido": "Ellis",
+      "contrasena": "Raquel2024!"
+    },
+    {
+      "id": "8",
+      "nombre": "Daniel",
+      "email": "Daniel_Casey7991@urn0m.club",
+      "telefono": "914044050",
+      "apellido": "Casey",
+      "contrasena": "Daniel2024!"
+    },
+    {
+      "id": "9",
+      "nombre": "Carla",
+      "email": "Carla_White726@fhuux.auction",
+      "telefono": "962068547",
+      "apellido": "White",
+      "contrasena": "Carla2024!"
+    },
+    {
+      "id": "10",
+      "nombre": "Julian",
+      "email": "Julian_Woodcock9653@xqj6f.works",
+      "telefono": "912564219",
+      "apellido": "Woodcock",
+      "contrasena": "Julian2024!"
+    },
+    {
+      "id": "11",
+      "nombre": "Paula",
+      "email": "Paula_Underhill1346@cke3u.catering",
+      "telefono": "961718883",
+      "apellido": "Underhill",
+      "contrasena": "Paula2024!"
+    },
+    {
+      "id": "12",
+      "nombre": "Rowan",
+      "email": "Rowan_Brett1168@nb44i.club",
+      "telefono": "901045144",
+      "apellido": "Brett",
+      "contrasena": "Rowan2024!"
+    },
+    {
+      "id": "13",
+      "nombre": "Esmeralda",
+      "email": "Esmeralda_Everett9800@p5emz.website",
+      "telefono": "970220368",
+      "apellido": "Everett",
+      "contrasena": "Esmeralda2024!"
+    },
+    {
+      "id": "14",
+      "nombre": "Benjamin",
+      "email": "Benjamin_Blackburn8056@yvu30.meet",
+      "telefono": "988723102",
+      "apellido": "Blackburn",
+      "contrasena": "Benjamin2024!"
+    },
+    {
+      "id": "15",
+      "nombre": "Rocco",
+      "email": "Rocco_Eagle5466@nanoff.edu",
+      "telefono": "919088202",
+      "apellido": "Eagle",
+      "contrasena": "Rocco2024!"
+    },
+    {
+      "id": "16",
+      "nombre": "Daniel",
+      "email": "Daniel_Appleton5186@mpibr.edu",
+      "telefono": "915271009",
+      "apellido": "Appleton",
+      "contrasena": "Daniel2024!"
+    },
+    {
+      "id": "17",
+      "nombre": "Stacy",
+      "email": "Stacy_Wilkinson1150@nmz0p.website",
+      "telefono": "914908740",
+      "apellido": "Wilkinson",
+      "contrasena": "Stacy2024!"
+    },
+    {
+      "id": "18",
+      "nombre": "Brad",
+      "email": "Brad_Saunders7089@fhuux.center",
+      "telefono": "995336936",
+      "apellido": "Saunders",
+      "contrasena": "Brad2024!"
+    },
+    {
+      "id": "19",
+      "nombre": "Oliver",
+      "email": "Oliver_Hill1622@voylg.auction",
+      "telefono": "982791741",
+      "apellido": "Hill",
+      "contrasena": "Oliver2024!"
+    },
+    {
+      "id": "20",
+      "nombre": "Denis",
+      "email": "Denis_Purvis588@bqkv0.press",
+      "telefono": "979215157",
+      "apellido": "Purvis",
+      "contrasena": "Denis2024!"
+    }
+  ],
+"productos": [
     {
       "id": "1",
       "marca": "Rare Beauty",
@@ -17,6 +179,168 @@
       "descripcion": "Paleta de sombras con colores neutros y oscuros",
       "precio": "60",
       "imagen": "https://i.blogs.es/c0b6f3/81slpluynfl._ac_sl1500_/original.jpeg"
+    },
+    {
+      "id": "3",
+      "marca": "Maybelline",
+      "categoria": "Labial",
+      "nombre": "SuperStay Matte Ink",
+      "descripcion": "Labial líquido de larga duración color vino",
+      "precio": "45",
+      "imagen": "https://www.maybelline.com/~/media/mny/us/makeup-lips/lipstick/superstay-matte-ink-liquid-lipstick/superstay-matte-ink-liquid-lipstick-product-image.jpg"
+    },
+    {
+      "id": "4",
+      "marca": "Fenty Beauty",
+      "categoria": "Iluminador",
+      "nombre": "Killawatt Freestyle",
+      "descripcion": "Iluminador en polvo dorado brillante",
+      "precio": "190",
+      "imagen": "https://www.fentybeauty.com/dw/image/v2/BDRX_PRD/on/demandware.static/-/Sites-itemmaster-fenty/default/dw543a2e07/large/FB30004_FB0000_2.png"
+    },
+    {
+      "id": "5",
+      "marca": "MAC",
+      "categoria": "Base de Maquillaje",
+      "nombre": "Studio Fix Fluid",
+      "descripcion": "Base líquida de alta cobertura",
+      "precio": "180",
+      "imagen": "https://www.maccosmetics.com/media/export/cms/products/640x600/mac_sku_M4GH01_640x600_0.jpg"
+    },
+    {
+      "id": "6",
+      "marca": "Too Faced",
+      "categoria": "Polvo Compacto",
+      "nombre": "Born This Way",
+      "descripcion": "Polvo compacto para un acabado natural",
+      "precio": "120",
+      "imagen": "https://www.toofaced.com/dw/image/v2/AARC_PRD/on/demandware.static/-/Sites-itemmaster-toofaced/default/dw78bb18f5/images/hi-res/70316_BornThisWayPressedPowder_6.5.jpg"
+    },
+    {
+      "id": "7",
+      "marca": "Tarte",
+      "categoria": "Corrector",
+      "nombre": "Shape Tape Concealer",
+      "descripcion": "Corrector de alta cobertura",
+      "precio": "130",
+      "imagen": "https://www.sephora.com/productimages/sku/s2132440-main-zoom.jpg"
+    },
+    {
+      "id": "8",
+      "marca": "Huda Beauty",
+      "categoria": "Sombra de Ojos",
+      "nombre": "Mercury Retrograde Palette",
+      "descripcion": "Paleta de sombras con colores vibrantes",
+      "precio": "250",
+      "imagen": "https://www.hudabeauty.com/-/media/images/products/eyeshadow_palette/mercury_retrograde_palette/thumb_huda-beauty-mercury-retrograde-eyeshadow-palette-main.jpg"
+    },
+    {
+      "id": "9",
+      "marca": "Charlotte Tilbury",
+      "categoria": "Bronzer",
+      "nombre": "Airbrush Bronzer",
+      "descripcion": "Bronzer en polvo de larga duración",
+      "precio": "220",
+      "imagen": "https://www.charlottetilbury.com/on/demandware.static/-/Sites-ct-master-catalog/default/dw8f054f07/images/packshots/airbrush-bronzer-airbrush-bronzer-01-fair-front.jpg"
+    },
+    {
+      "id": "10",
+      "marca": "NYX",
+      "categoria": "Delineador",
+      "nombre": "Epic Ink Liner",
+      "descripcion": "Delineador líquido a prueba de agua",
+      "precio": "55",
+      "imagen": "https://www.nyxcosmetics.com/dw/image/v2/AAFH_PRD/on/demandware.static/-/Sites-nyx-master-catalog/default/dwafbead03/product_images/800897085798_epic_ink_liner_black_main.jpg"
+    },
+    {
+      "id": "11",
+      "marca": "Urban Decay",
+      "categoria": "Fijador de Maquillaje",
+      "nombre": "All Nighter Setting Spray",
+      "descripcion": "Spray fijador de maquillaje de larga duración",
+      "precio": "110",
+      "imagen": "https://www.urbandecay.com/dw/image/v2/AAWV_PRD/on/demandware.static/-/Sites-urban-decay-master-catalog/default/dw067fcd11/images/hi-res/ud_allnighter_spray.jpg"
+    },
+    {
+      "id": "12",
+      "marca": "Benefit",
+      "categoria": "Cejas",
+      "nombre": "Precisely, My Brow Pencil",
+      "descripcion": "Lápiz de cejas ultra preciso",
+      "precio": "90",
+      "imagen": "https://www.benefitcosmetics.com/on/demandware.static/-/Sites-master-catalog-benefit/default/dw27b87aa1/images/hi-res/my-brow-pencil-product.jpg"
+    },
+    {
+      "id": "13",
+      "marca": "KVD Vegan Beauty",
+      "categoria": "Delineador",
+      "nombre": "Tattoo Liner",
+      "descripcion": "Delineador líquido con acabado mate",
+      "precio": "95",
+      "imagen": "https://www.kvdveganbeauty.com/on/demandware.static/-/Sites-kvd-master-catalog/default/dw7156b9b4/images/products/tattoo_liner_product_image.jpg"
+    },
+    {
+      "id": "14",
+      "marca": "Sephora Collection",
+      "categoria": "Labial",
+      "nombre": "Cream Lip Stain",
+      "descripcion": "Labial cremoso de larga duración",
+      "precio": "50",
+      "imagen": "https://www.sephora.com/productimages/sku/s1780625-main-zoom.jpg"
+    },
+    {
+      "id": "15",
+      "marca": "Dior",
+      "categoria": "Perfume",
+      "nombre": "J'adore Eau de Parfum",
+      "descripcion": "Perfume floral con notas de jazmín y rosa",
+      "precio": "650",
+      "imagen": "https://www.dior.com/on/demandware.static/-/Sites-dior-master/default/dw6b82a523/images/Y0996368/F099636899_E01_ZHC.jpg"
+    },
+    {
+      "id": "16",
+      "marca": "Clinique",
+      "categoria": "Hidratante",
+      "nombre": "Moisture Surge 72-Hour",
+      "descripcion": "Hidratante facial intensivo",
+      "precio": "230",
+      "imagen": "https://www.clinique.com/media/export/cms/products/640x600/clq_7HJ501_640x600_0.jpg"
+    },
+    {
+      "id": "17",
+      "marca": "Lancôme",
+      "categoria": "Mascara de Pestañas",
+      "nombre": "Monsieur Big Mascara",
+      "descripcion": "Mascara de pestañas para volumen extremo",
+      "precio": "170",
+      "imagen": "https://www.lancome.com/dw/image/v2/AAWL_PRD/on/demandware.static/-/Sites-lancome-master-catalog/default/dw6629a904/images/Monsieur-Big-Mascara/Monsieur-Big-Mascara-Original.jpg"
+    },
+    {
+      "id": "18",
+      "marca": "L'Oreal",
+      "categoria": "Base de Maquillaje",
+      "nombre": "Infallible 24H Fresh Wear",
+      "descripcion": "Base de maquillaje de larga duración",
+      "precio": "130",
+      "imagen": "https://www.lorealparisusa.com/-/media/images/lop/home/products/makeup/face/foundation/infallible-24hr-fresh-wear-foundation/infallible-24hr-fresh-wear-foundation.jpg"
+    },
+    {
+      "id": "19",
+      "marca": "Estée Lauder",
+      "categoria": "Serum",
+      "nombre": "Advanced Night Repair",
+      "descripcion": "Sérum regenerador para el rostro",
+      "precio": "540",
+      "imagen": "https://www.esteelauder.com/media/export/cms/products/640x600/el_sku_P9HC_640x600_0.jpg"
+    },
+    {
+      "id": "20",
+      "marca": "Pat McGrath",
+      "categoria": "Sombras",
+      "nombre": "Mothership Palette",
+      "descripcion": "Paleta de sombras con acabado brillante y mate",
+      "precio": "300",
+      "imagen": "https://www.patmcgrath.com/dw/image/v2/BCQN_PRD/on/demandware.static/-/Sites-itemmaster/default/dw6bb2f20e/images/large/mothership-v-artistry-palette.jpg"
     }
   ]
 }

@@ -36,7 +36,7 @@ export default {
     const apiProductsService = new ProductsApiService();
     try {
       const response = await apiProductsService.getProducts();
-      this.products = response.data.map(productData => Product.fromApiResponse(productData));
+      this.products = response.data.productos.map(productData => Product.fromApiResponse(productData));
       console.log(this.products);
     } catch {
       console.error('Error fetching books:', error);

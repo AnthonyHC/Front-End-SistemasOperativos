@@ -32,7 +32,7 @@ export default {
     const apiCustomersService = new CustomersApiService();
     try {
       const response = await apiCustomersService.getCustomers();
-      this.customers = response.data.map(customerData => Customer.fromApiResponse(customerData));
+      this.customers = response.data.clientes.map(customerData => Customer.fromApiResponse(customerData));
       console.log(this.customers);
     } catch {
       console.error('Error fetching books:', error);

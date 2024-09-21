@@ -1,8 +1,17 @@
 <script>
+import {Product} from "../model/product.entity.js";
 
-  export default {
-    name: "ViProductCard",
+export default {
+  name: "ViewProductCard",
+  props: {
+    product: Product
+  },
+  methods: {
+    addToCart() {
+      this.$emit('addToCart', this.product);
+    }
   }
+}
 </script>
 
 <template>
@@ -11,16 +20,20 @@
     <template #title></template>
     <template #content>
       <div class="productDetails">
-        <img src="../../assets/logo.png" alt="product" class="productImage" />
+        <img :src="product.imagen" :alt="product.nombre" class="productImage" />
         <div class="contentStyle">
           <h2>Nombre:</h2>
+          <p>{{product.nombre}}</p>
           <h2>Marca:</h2>
+          <p>{{product.marca}}</p>
           <h2>Descripcion:</h2>
+          <p>{{product.descripcion}}</p>
           <h2>Precio</h2>
+          <p>{{product.precio}}</p>
           <div class="buttonContainer">
             <pv-button icon="pi pi-heart" severity="help" rounded aria-label="Favorite"
                        class="button-heart-container"></pv-button>
-            <pv-button class="agregarCarro">
+            <pv-button class="agregarCarro" @click="addToCart">
               Agregar al carrito
             </pv-button>
           </div>
@@ -30,6 +43,7 @@
   </pv-card>
 </template>
 
+
 <style scoped>
 .product {
   display: flex;
@@ -38,6 +52,7 @@
   height: 100vh; /* Hace que el contenido ocupe toda la pantalla verticalmente */
   background-color: #333; /* Puedes ajustar este color según el diseño */
   padding: 20px;
+  margin: auto;
 }
 .productDetails {
   display: flex;
@@ -58,7 +73,6 @@
   text-align: left;
   justify-content: space-between;
   font-size: 10px;
-  font-weight: bolder;
 }
 .buttonContainer {
   display: flex;

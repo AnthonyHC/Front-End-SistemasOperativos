@@ -1,19 +1,41 @@
 <script>
+import Toolbar from "./toolbar.component.vue";
+import {CustomersApiService} from "../products/services/customers-api.service.js";
+import {Customer} from "../products/model/customer.entity.js";
 export default {
   name: "login",
+  components: {Toolbar},
   data() {
     return {
       username: "",
       password: "",
+      loggedIn: false, // Nueva variable para controlar el estado de login,
+      customers: []
     };
   },
   methods: {
     login() {
-      if (this.username && this.password) {
+      // Validar si el email y la contraseña son correctos
+      const customer = this.customers.find(customer =>
+          customer.email === this.username && customer.contrasena === this.password
+      );
+
+      if (customer) {
+        this.loggedIn = true; // Actualiza el estado a loggedIn
         alert(`Logging in with username: ${this.username}`);
       } else {
-        alert("Please fill in both fields.")
+        alert("Invalid email or password.");
       }
+    }
+  },
+  async mounted() {
+    const apiCustomersService = new CustomersApiService();
+    try {
+      const response = await apiCustomersService.getCustomers();
+      this.customers = response.data.map(customerData => Customer.fromApiResponse(customerData));
+      console.log(this.customers);
+    } catch {
+      console.error('Error fetching books:', error);
     }
   }
 }
@@ -21,25 +43,28 @@ export default {
 
 <template>
   <div class="containerLogin">
-    <img src="../assets/logoBig.png" alt="Logo" class="logo"/>
-    <div class="loginUsername">
-      <h1>Username:</h1>
-      <input class="textboxUsername" type="text" v-model="username" id="username" placeholder="Enter your username" maxlength="20" />
+    <img v-if="!loggedIn" src="../assets/logoBig.png" alt="Logo" class="logo"/>
+    <div v-if="!loggedIn">
+      <div class="loginUsername">
+        <h1>Email:</h1>
+        <input class="textboxUsername" type="text" v-model="username" id="username" placeholder="Enter your username"/>
+      </div>
+      <div class="loginPassword">
+        <h1>Password:</h1>
+        <input class="textboxUsername" type="password" v-model="password" id="password" placeholder="Enter your password"/>
+      </div>
+      <pv-button class="buttonLogin" @click="login">
+        Login
+      </pv-button>
     </div>
-    <div class="loginPassword">
-      <h1>Password:</h1>
-      <input class="textboxUsername" type="password" v-model="password" id="password" placeholder="Enter your password" maxlength="20" />
-    </div>
-    <pv-button class="buttonLogin" @click="login">
-      Login
-    </pv-button>
+
+    <toolbar v-if="loggedIn"></toolbar>
   </div>
 </template>
 
 <style scoped>
 .containerLogin {
   margin: auto;
-  background-color: beige;
   padding: 30px;
 }
   .loginUsername {

@@ -1,5 +1,4 @@
 <script>
-
 export default {
   name: "toolbar",
 }
@@ -21,7 +20,7 @@ export default {
         <pv-button icon="pi pi-heart" severity="help" rounded aria-label="Favorite"
                    class="button-heart-container" @click="$router.push('favoriteProducts')"></pv-button>
         <pv-button icon="pi pi-shopping-cart" severity="success" rounded aria-label="Cart"
-                   class="button-cart-container" @click="$router.push('shopCar')"></pv-button>
+                   class="button-cart-container" @click="$router.push({ path: 'shopCar', params: { items: shoppingCart } })"></pv-button>
         <pv-button icon="pi pi-user" severity="info" rounded aria-label="User"
                    class="button-user-container"></pv-button>
       </template>
@@ -57,9 +56,6 @@ export default {
   box-sizing: border-box; /* Incluir padding en el cálculo del ancho total */
 }
 
-.spacer {
-  flex: 1 1 auto;
-}
 
 .logo {
   max-width: 100px;

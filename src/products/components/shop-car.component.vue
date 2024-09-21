@@ -1,20 +1,16 @@
-
 <script>
-
 export default {
   name: "ShopCar",
-  data() {
-    return {
-      items: [
-        { product: 'Juan', cant: 30, price: 11.50 },
-        { product: 'Ana', cant: 25, price: 5.50 },
-        { product: 'Carlos', cant: 40, price: 8.70 },
-      ],
-    };
+  props: {
+    items: {
+      type: Array,
+      required: true
+    }
   },
   computed: {
     totalPrice() {
-      return this.items.reduce((sum, item) => sum + item.price, 0).toFixed(2);
+      // Usar shoppingCart para calcular el precio total
+      return this.items.reduce((sum, item) => sum + item.product.precio * item.quantity, 0).toFixed(2);
     }
   }
 }
@@ -22,26 +18,35 @@ export default {
 
 <template>
   <div class="container">
-    <pv-table :value="items" class="elevation-1">
-      <pv-column field="product" header="Producto">
-        <template #body="{ data }">
-          <div class="product-cell">
-            <img src="../../assets/logo.png" alt="Imagen" class="product-image" />
-            {{ data.product }}
-          </div>
-        </template>
-      </pv-column>
-      <pv-column field="cant" header="Cantidad"></pv-column>
-      <pv-column field="price" header="Precio"></pv-column>
-    </pv-table>
-    <div class="total-row">
-      <span class="total-label">Total:</span>
-      <span class="total-value">{{ totalPrice }}</span>
+    <div v-if="items.length > 0">
+      <h2>Carrito de Compras</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="item in items" :key="item.product.id">
+          <td>{{ item.product.nombre }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ (item.product.precio * item.quantity).toFixed(2) }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="total-row">
+        <span class="total-label">Total:</span>
+        <span class="total-value">{{ totalPrice }}</span>
+      </div>
     </div>
+    <div v-else>
+      <p>No hay productos en el carrito.</p>
+    </div>
+    <pv-button class="button-pay-container" @click="this.$router.push('/purchaseConfirmation')">Pagar</pv-button>
   </div>
-  <pv-button class="button-pay-container" @click="$router.push('/purchaseConfirmation')">Pagar</pv-button>
 </template>
-
 
 <style scoped>
 .container {

@@ -1,20 +1,13 @@
 <script>
-import axios from 'axios'
+import {Product} from "../model/product.entity.js";
 
 export default {
   name: "product-card",
-
-  data () {
-    return {
-      info: null
-    }
-  },
-
+  props: {product: Product},
   methods: {
-    invocateApi() {
-      axios
-          .get('http://localhost:3000/productos')
-          .then(response => (this.info = response.data))
+    selectProduct() {
+      // Emitir un evento al padre con los datos del producto
+      this.$emit("productSelected", this.product);
     }
   }
 }
@@ -29,16 +22,16 @@ export default {
     <template #subtitle>
     </template>
     <template #content>
-      <img src="../../assets/blush-rare-beauty.jpeg" alt="product" class="img-product-container" />
-      <p class="name-product-container">Nombre</p>
-      <p class="brand-product-container">Marca</p>
-      <p class="cost-product-container">Precio</p>
-      <button @click="invocateApi">traer data</button>
-      {{info}}
+      <img :alt="product.name" :src="product.imagen" class="img-product-container"
+           width="200px" height="200px"/>
+      <p class="name-product-container">{{product.nombre}}</p>
+      <p class="brand-product-container">{{product.marca}}</p>
+      <p class="cost-product-container">S/ {{product.precio}}</p>
     </template>
     <template #footer>
       <div class="call-to-action-container">
-        <pv-button class="button-details-container" severity="primary">Detalle</pv-button>
+        <pv-button class="button-details-container" severity="primary"
+                   @click="selectProduct">Detalle</pv-button>
         <pv-button icon="pi pi-heart" severity="help" rounded aria-label="Favorite"
                    class="button-heart-container"></pv-button>
         <pv-button icon="pi pi-shopping-cart" severity="success" rounded aria-label="Cart"
@@ -51,13 +44,14 @@ export default {
 <style scoped>
 .product-card-container {
   width: 300px;
+  height: 460px;
   background-color: #f1f1f1;
   padding: 0;
   border-radius: 25px;
 }
 
 .img-product-container {
-  border-radius: 25px;
+  //border-radius: 25px;
 }
 
 .button-heart-container, .button-cart-container, .button-details-container{
